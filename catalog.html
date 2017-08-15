@@ -22,15 +22,47 @@
           <li class="basket-link basket-link-full">
             <a href="basket.html">
               <b class="basket-count">2</b> товар<b class="basket-count-ending">а</b>
-            </a></li>
+            </a>
+            <div class="visually-hidden popup basket-popup">
+              <table>
+                <tr>
+                  <th class="visually-hidden">удалить из корзины</th>
+                  <th class="visually-hidden">изображение</th>
+                  <th class="visually-hidden">название</th>
+                  <th class="visually-hidden">рассчёт стоимости</th>
+                  <th class="visually-hidden">стоимость</th>
+                </tr>
+                <tr>
+                  <td><button class="delete">Х</button></td>
+                  <td><img src="img/img-product-13.jpg" width="30" height="30" alt="Пломбир с апельсиновым джемом"></td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5 кг х 200 руб.</td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><button class="delete">Х</button></td>
+                  <td><img src="img/img-product-14.jpg" width="30" height="30" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>1,5 кг х 300 руб.</td>
+                  <td>450 руб.</td>
+                </tr>
+              </table>
+              <span class="full-cost">
+                Итого: <b>750</b> руб.
+              </span>
+              <a class="button" href="basket.html">Оформить заказ</a>
+            </div>
+
+          </li>
         </ul>
-        <span class="Working-hours">c 10 до 20, ежедневно</span>
-        <b class="telephone">8 812 450-25-25</b>
+        <div class="contact-us-briefly">
+          <span class="working-hours">c 10 до 20, ежедневно</span>
+          <b class="telephone">8 812 450-25-25</b>
+        </div>
       </nav>
     </header>
 
     <main class="conteiner">
-
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -154,6 +186,9 @@
               <b>355 &#x584.</b>
               <span>/кг</span>
             </p>
+            <div class="visually-hidden popup button-popup">
+                <button class="button" type="button" name="button-preview">Быстрый просмотр</button>
+            </div>
           </li>
           <li class="catalog-item">
             <h3>
@@ -333,16 +368,16 @@
       <div class="social">
         <ul>
           <li>
-            <a class="social-button" href="#">Твиттер</a>
+            <a class="social-button social-button-twitt" href="#">Твиттер</a>
           </li>
           <li>
-            <a class="social-button" href="#">Инстаграмм</a>
+            <a class="social-button social-button-inst" href="#">Инстаграмм</a>
           </li>
           <li>
-            <a class="social-button" href="#">Фейсбук</a>
+            <a class="social-button social-button-fb" href="#">Фейсбук</a>
           </li>
           <li>
-            <a class="social-button" href="#">ВКонтакте</a>
+            <a class="social-button social-button-vk" href="#">ВКонтакте</a>
           </li>
         </ul>
       </div>
@@ -358,39 +393,5 @@
         Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy 2017
       </p>
     </footer>
-
-    <section class="modal-basket">
-      <table>
-        <tr>
-          <th class="visually-hidden">удалить из корзины</th>
-          <th class="visually-hidden">изображение</th>
-          <th class="visually-hidden">название</th>
-          <th class="visually-hidden">рассчёт стоимости</th>
-          <th class="visually-hidden">стоимость</th>
-        </tr>
-        <tr>
-          <td><button class="delete">Х</button></td>
-          <td><img src="img/img-product-13.jpg" width="30" height="30" alt="Пломбир с апельсиновым джемом"></td>
-          <td>Пломбир с апельсиновым джемом</td>
-          <td>1,5 кг х 200 руб.</td>
-          <td>300 руб.</td>
-        </tr>
-        <tr>
-          <td><button class="delete">Х</button></td>
-          <td><img src="img/img-product-14.jpg" width="30" height="30" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-          <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td>1,5 кг х 300 руб.</td>
-          <td>450 руб.</td>
-        </tr>
-      </table>
-      <div class="full-cost">
-        Итого: <b>750</b> руб.
-      </div>
-      <a class="button" href="basket.html">Оформить заказ</a>
-    </section>
-
-    <section class="modal-preview-link">
-      <button class="button" type="button" name="button-preview">Быстрый просмотр</button>
-    </section>
   </body>
 </html>
