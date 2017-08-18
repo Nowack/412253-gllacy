@@ -6,16 +6,60 @@ body {
   color: #ffffff;
   background: grey;
 }
-h1, h2{
-  font-family: "Arial";
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: bolder;
-}
-.promo-item h3{
+h1{
   font-size: 35px;
   line-height: 41px;
 }
+h2{
+  font-size: 30px;
+  line-height: 36px;
+}
+.promo h3{
+  font-size: 35px;
+  line-height: 41px;
+}
+h1, h2{
+  font-family: "Arial";
+  font-weight: bolder;
+}
+
 .features, .news-in-blog, .subscribtion{
   color: #000000;
+}
+.slider p{
+  font-size: 60px;
+  line-height: 60px;
+}
+.promo p{
+  font-size: 18px;
+  line-height: 22px;
+}
+.features p{
+  font-size: 24px;
+  line-height: 30px;
+}
+.bestsellers {
+
+}
+.news-in-blog h2{
+  font-size: 16px;
+  line-height: 22px;
+}
+footer{
+  font-size: 13px;
+  line-height: 16px;
+}
+.modal h2{
+  font-size: 24px;
+  line-height: 28px;
+}
+.visually-hidden{
+ position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+  border: 0;
 }
