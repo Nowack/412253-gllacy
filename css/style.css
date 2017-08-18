@@ -1,0 +1,21 @@
+body {
+  font-family: "Myriad Pro";
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #ffffff;
+  background: grey;
+}
+h1, h2{
+  font-family: "Arial";
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bolder;
+}
+.promo-item h3{
+  font-size: 35px;
+  line-height: 41px;
+}
+.features, .news-in-blog, .subscribtion{
+  color: #000000;
+}
