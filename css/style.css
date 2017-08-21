@@ -1,10 +1,10 @@
 body {
-  font-family: "Myriad Pro";
+  font-family: Arial, Tahoma, sans-serif;
   font-size: 16px;
   line-height: 22px;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
-  background: grey;
+  background-color: grey;
 }
 h1{
   font-size: 35px;
@@ -18,12 +18,14 @@ h2{
   font-size: 35px;
   line-height: 41px;
 }
-h1, h2{
-  font-family: "Arial";
-  font-weight: bolder;
+h1,
+h2{
+  font-weight: 700;
 }
 
-.features, .news-in-blog, .subscribtion{
+.features,
+.news-in-blog,
+.subscribtion{
   color: #000000;
 }
 .slider p{
