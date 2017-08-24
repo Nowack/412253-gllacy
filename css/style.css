@@ -1,11 +1,316 @@
 body {
+  margin:0;
+  padding:0;
+
   font-family: Arial, Tahoma, sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: #ffffff;
-  background-color: grey;
+  background-color: #849d8f;
 }
+a{
+  text-decoration: none;
+}
+.button{
+  color: #ffffff;
+  background-color: #ef5f3f;
+  text-align: center;
+}
+.button:hover,
+.button:focus{
+  background-color: #f17c64;
+}
+.button:active{
+  background-color: #dc5539;
+}
+.popup{
+  background-color: #f8f7f4;
+}
+.main-navigation{
+  font-size: 14px;
+  line-height: 20px;
+  color:ffffff;
+}
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+.site-navigation a,
+.user-navigation a{
+  color:#ffffff;
+}
+.site-navigation a{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.site-navigation a:hover{
+  color: #323232;
+  background-color: #f7f6f3;
+}
+.site-navigation a:focus{
+  color: #323232;
+  background-color: #f7f6f3;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.site-navigation-current a:active{
+  color: #323232;
+  background-color: #d07058;
+}
+
+.catalog-menu li{
+  list-style: none;
+
+}
+.catalog-menu  li a{
+    border: none;
+    color: #323232;
+}
+.catalog-menu  li a:hover,
+.catalog-menu  li a:focus{
+  background-color: #fbded7;
+  box-shadow: none;
+}
+.catalog-menu  li a:active{
+  background-color: #f6b5a5;
+}
+
+
+
+.user-navigation a{
+  font-size: 14px;
+  line-height: 16px;
+}
+.appointment-form .restore a,
+.appointment-form .new-account a{
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+  border-bottom: 1px solid #b2b2b2;
+}
+.appointment-form .restore a:focus,
+.appointment-form .new-account a:focus,
+.appointment-form .restore a:hover,
+.appointment-form .new-account a:hover,.appointment-form .restore a:active,
+.appointment-form .new-account a:active{
+  color: #e84d37;
+  border-bottom: 1px solid #f9cdc4;
+}
+.appointment-form input[type="password"],
+.appointment-form input[type="email"],
+.appointment-form input[type="search"],
+.modal input[type="email"],
+.modal input[type="text"],
+.modal textarea{
+  font: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  box-shadow: 0 0 0 1px #d3d3d2;
+  border-radius: 3px;
+}
+.appointment-form input[type="password"]:hover,
+.appointment-form input[type="email"]:hover,
+.appointment-form input[type="search"]:hover,
+.modal input[type="email"]:hover,
+.modal input[type="text"]:hover,
+.modal textarea:hover{
+  box-shadow: 0 0 0 2px #c7c6c5;
+}
+.appointment-form input[type="password"]:focus,
+.appointment-form input[type="email"]:focus,
+.appointment-form input[type="search"]:focus,
+.modal input[type="email"]:focus,
+.modal input[type="text"]:focus,
+.modal textarea:focus {
+  box-shadow: 0 0 0 2px #8fbdec;
+}
+
+.appointment-form li{
+  list-style: none;
+}
+
+.search-link,
+.login-link{
+  font-size: 14px;
+  line-height: 16px;
+}
+.login-link a:hover,
+.login-link a:focus,
+.login-link a:active{
+  color: #323232;
+  font-weight: 500;
+  background-color: #f7f6f3;
+}
+.contact-us-briefly{
+  text-align: right;
+}
+.contact-us-briefly span{
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.contact-us-briefly a{
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.slider li{
+  list-style: none;
+}
+.slider p{
+  font-size: 60px;
+  line-height: 60px;
+}
+.slider-item{
+  text-align: center;
+}
+.slider a{
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 600;
+}
+.slider-pagination li{
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+.promo{
+  text-align: left;
+}
+.promo-item-raspberry{
+  background-image: url(../img/raspberry.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.promo-item-choco{
+  background-image: url(../img/choco.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.promo h2{
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 600;
+
+}
+.promo p{
+  font-size: 18px;
+  line-height: 22px;
+}
+.catalog-item{
+  list-style: none;
+  text-align: center;
+}
+.catalog-category{
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+}
+.catalog-item img{
+  border-radius: 50%;
+}
+.catalog-item-price b{
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 600;
+}
+.catalog-item-price span{
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 600;
+
+}
+.features{
+  color: #323232;
+  background-color: #color: #323232;
+  background-image: url(../img/waffle.jpg);
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.features p{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500px;
+}
+.features li{
+  list-style: none;
+}
+.news-in-blog{
+  background-color: #ffffff;
+  background-image: url(../img/strawberry.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.news-in-blog h2,
+.subscribtion-content{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.news-in-blog a{
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
+  text-decoration: underline;
+}
+.subscribtion{
+  background-color: #f8f7f4;
+}
+.contact-feedback{
+  color:#323232;
+  background-color: #ffffff;
+}
+.contact-feedback p{
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact-address{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+.contact-phone{
+font-size: 18px;
+line-height: 22px;
+color:#323232;
+}
+
+.social li,
+.footer-navigation li{
+  list-style: none;
+
+}
+.footer-navigation{
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.footer-navigation a,
+.footer-copyright a{
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer-navigation a:hover,
+.footer-copyright a:hover,
+.footer-navigation a:focus,
+.footer-copyright a:focus,
+.footer-navigation a:active,
+.footer-copyright a:active{
+  color:#ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
+}
+
+
+
+
+
 h1{
   font-size: 35px;
   line-height: 41px;
@@ -55,7 +360,7 @@ footer{
   font-size: 24px;
   line-height: 28px;
 }
-/*.visually-hidden{
+/**.visually-hidden{
  position: absolute;
 	overflow: hidden;
 	clip: rect(0 0 0 0);

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Магазин мороженого Глейси</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   </head>
 
   <body>
@@ -31,8 +33,9 @@
             <div class="visually-hidden popup search-popup">
                 <form class="appointment-form" action="https://echo.htmlacatemy.ru" method="get">
                   <p>
-                    <label for="appointment-search" class="visually-hidden">Поиск</label>
-                    <input type="submit" id="appointment-search" name="search" placeholder="Что ищем?">
+                    <label for="input-search">Введите запрос</label>
+                    <input type="search" id="input-search" name="input-search"  class="input-search" placeholder="Что ищем?">
+
                   </p>
                 </form>
             </div>
@@ -92,12 +95,12 @@
 
       <article class="promo">
         <h2 class="visually-hidden">Специальные предложения</h2>
-        <section class="promo-item">
+        <section class="promo-item promo-item-raspberry">
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="button promo-button" href="#">Хочу варенье!</a>
         </section>
-        <section class="promo-item">
+        <section class="promo-item promo-item-choco">
           <h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="button promo-button" href="#">Хочу шоколадки!</a>
@@ -119,7 +122,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>310 &#x584.</b>
+              <b>310 &#x584</b>
               <span>/кг</span>
             </p>
           </li>
@@ -135,7 +138,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>380 &#x584.</b>
+              <b>380 &#x584</b>
               <span>/кг</span>
             </p>
           </li>
@@ -151,7 +154,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>355 &#x584.</b>
+              <b>355 &#x584</b>
               <span>/кг</span>
             </p>
           </li>
@@ -167,7 +170,7 @@
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>415 &#x584.</b>
+              <b>415 &#x584</b>
               <span>/кг</span>
             </p>
           </li>
