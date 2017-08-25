@@ -16,6 +16,7 @@ a{
   color: #ffffff;
   background-color: #ef5f3f;
   text-align: center;
+  border: none;
 }
 .button:hover,
 .button:focus{
@@ -80,6 +81,70 @@ a{
   font-size: 14px;
   line-height: 16px;
 }
+
+.basket-link a,
+.login-link a,
+.search-link button{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.search-link button{
+  color: transparent;
+  border:none;
+  background-image:url(../img/magnifier-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.search-link button:hover,
+.search-link button:focus,
+.search-link button:active{
+  background-color: #ffffff;
+  background-image:url(../img/magnifier.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.login-link a {
+
+  width: 35px;
+  height: 30px;
+  padding-left: 45px;
+  background-image: url(../img/enter-white.svg);
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.login-link a:hover,
+.login-link a:focus,
+.login-link a:active{
+  background-color: #ffffff;
+  background-image:url(../img/enter.svg);
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+}
+.basket-link a {
+  width: 35px;
+  height: 30px;
+  padding-left: 45px;
+  background-image: url(../img/basket.svg);
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.basket-link-full a{
+  background-color: #323232;
+  background-image:url(../img/basket-full.svg);
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+}
+
+
+
 .appointment-form .restore a,
 .appointment-form .new-account a{
   font-size: 13px;
@@ -141,6 +206,7 @@ a{
   font-weight: 500;
   background-color: #f7f6f3;
 }
+
 .contact-us-briefly{
   text-align: right;
 }
@@ -170,13 +236,21 @@ a{
   line-height: 44px;
   font-weight: 600;
 }
-.slider-pagination li{
+.slider-pagination-item{
   list-style: none;
   width: 20px;
   height: 20px;
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
+}
+.slider-pagination-item:hover,
+.slider-pagination-item:focus{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.slider-pagination-item-current,
+.slider-pagination-item:active{
+  background-color: #ffffff;
 }
 .promo{
   text-align: left;
@@ -204,6 +278,19 @@ a{
 .catalog-item{
   list-style: none;
   text-align: center;
+  position: relative;
+}
+.catalog-item:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.catalog-item:hover .button-wrap{
+  display: block;
+}
+.button-wrap{
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: center;
 }
 .catalog-category{
   font-size: 16px;
