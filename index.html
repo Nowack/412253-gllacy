@@ -87,9 +87,9 @@
             <a class="button" href="#">Давайте оба!</a></li>
         </ul>
         <ul class="slider-pagination">
-          <li class="slider-pagination-item slider-pagination-item-current"><a href="#">1</a></li>
-          <li class="slider-pagination-item"><a href="#">2</a></li>
-          <li class="slider-pagination-item"><a href="#">3</a></li>
+          <li class="slider-pagination-item slider-pagination-item-1 slider-pagination-item-current"><a href="#">1</a></li>
+          <li class="slider-pagination-item slider-pagination-item-2"><a href="#">2</a></li>
+          <li class="slider-pagination-item slider-pagination-item-3"><a href="#">3</a></li>
         </ul>
       </section>
 
@@ -211,10 +211,10 @@
           </p>
           <form class="subscribtion-form" action="https://echo.htmlacatemy.ru" method="get">
             <p>
-              <label for="subscribtion-email">Адрес</label>
+              <label for="subscribtion-email">Электронная почта</label>
               <input type="email" name="email" id="subscribtion-email" placeholder="Электронная почта">
-              <input  class="button" type="submit" name="subscribe" value="Отправить">
             </p>
+            <button class="button" type="submit" name="subscribe">Отправить</button>
           </form>
         </div>
       </section>
@@ -276,15 +276,15 @@
       <h2 class="modal modal-feedback">Мы обязательно вам ответим!</h2>
       <form class="feedback-form" action="https://echo.htmlacatemy.ru" method="post">
         <p>
-          <label for="feedback-name" class="visually-hidden">Имя</label>
+          <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
           <input type="text" id="feedback-name" name="name" placeholder="Как вас зовут?">
         </p>
         <p>
-          <label for="feedback-email" class="visually-hidden">Адрес</label>
+          <label for="feedback-email" class="visually-hidden">Ваша почта для ответа?</label>
           <input type="email" id="feedback-email" name="email" placeholder="Ваша почта для ответа?">
         </p>
         <p>
-          <label for="feedback-textarea" class="visually-hidden">Поле ввода</label>
+          <label for="feedback-textarea" class="visually-hidden">Напишите что-нибудь...</label>
           <textarea id="feedback-textarea" name="feedback-textarea" rows="8" cols="80" placeholder="Напишите что-нибудь..."></textarea>
         </p>
         <input class="button" type="submit" name="feedback-btn" value="Отправить">
