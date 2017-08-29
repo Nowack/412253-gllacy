@@ -313,7 +313,7 @@ background-color: #ffffff;
   background-image: url(../img/slider-icecream-1.png);
   background-repeat: no-repeat;
   background-position: top center;
-  display: none;
+
 }
 .slider-item-2{
   border:1px solid #8996a6;
@@ -387,6 +387,7 @@ background-color: #ffffff;
 .slider-pagination-item:active{
   background-color: #ffffff;
 }
+
 
 
 .promo{
