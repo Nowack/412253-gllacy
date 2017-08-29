@@ -263,6 +263,36 @@ main .button,
   background-color: #9d8b84;
 }
 
+input.main-background-1:checked ~ div.main-background  .slider-item-1 {
+display: block
+}
+input.main-background-1:checked ~ div.main-background .slider-item-2,
+input.main-background-1:checked ~ div.main-background .slider-item-3 {
+display: none;
+}
+input.main-background-2:checked ~ div.main-background .slider-item-2 {
+display: block
+}
+input.main-background-2:checked ~ div.main-background .slider-item-1,
+input.main-background-2:checked ~ div.main-background .slider-item-3 {
+display: none;
+}
+input.main-background-3:checked ~ div.main-background .slider-item-3 {
+display: block
+}
+input.main-background-3:checked ~ div.main-background .slider-item-2,
+input.main-background-3:checked ~ div.main-background .slider-item-1 {
+display: none;
+}
+input.main-background-1:checked ~ div.main-background  label[for="main-background-1"] {
+background-color: #ffffff;
+}
+input.main-background-2:checked ~ div.main-background  label[for="main-background-2"] {
+background-color: #ffffff;
+}
+input.main-background-3:checked ~ div.main-background  label[for="main-background-3"] {
+background-color: #ffffff;
+}
 .slider{
   min-width: inherit;
   min-height: 536px;
@@ -273,28 +303,31 @@ main .button,
 }
 .slider-wrap{
   margin: 0 auto;
+  padding: 0;
+  position: relative;
 }
-
-
-.slider-item:first-child{
-  min-width: 1045px;
+.slider-item-1{
+  border: 1px solid #849d8f;
+  width: 100%;
   min-height: 881px;
   background-image: url(../img/slider-icecream-1.png);
   background-repeat: no-repeat;
   background-position: top center;
+  display: none;
 }
-.slider-item:nth-child(2){
-  min-width: 1065px;
-  min-height: 839px;
+.slider-item-2{
+  border:1px solid #8996a6;
+  width: 100%;
+  min-height: 881px;
   background-image: url(../img/slider-icecream-2.png);
   background-repeat: no-repeat;
   background-position: top center;
-
   display: none;
 }
-.slider-item:nth-child(3){
-  min-width: 1079px;
-  min-height: 854px;
+.slider-item-3{
+  border:1px solid #9d8b84;
+  width: 100%;
+  min-height: 881px;
   background-image: url(../img/slider-icecream-3.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -304,19 +337,22 @@ main .button,
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .slider p{
+  position: absolute;
+  bottom: 310px;
+  left: 50%;
+  margin-left: -335px;
+  min-width: 670px;
   font-size: 60px;
   line-height: 60px;
-  margin-bottom: 30px;
-  margin-top: 390px;
   text-align: center;
 }
-
 .slider a{
+  position: absolute;
+  top: 543px;
+  left: 50%;
+  margin-left: -140px;
   padding-left: 40px;
   padding-right: 40px;
   font-size: 32px;
@@ -326,6 +362,7 @@ main .button,
 .main-background-label{
   height: 24px;
   position: absolute;
+  z-index: 1000;
   bottom: 290px;
 }
 .slider-pagination-item{
