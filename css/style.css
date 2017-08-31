@@ -85,13 +85,13 @@ main .button,
   display: none;
 }
 
-.catalog-menu:active .popup-catalog-menu li,
-.catalog-menu:hover .popup-catalog-menu li,
+.site-navigation .catalog-menu:active .popup-catalog-menu li,
+.site-navigation .catalog-menu:hover .popup-catalog-menu li,
 .catalog-menu:focus .popup-catalog-menu li{
   display: block;
 }
-.catalog-menu:active .popup-catalog-menu,
-.catalog-menu:hover .popup-catalog-menu,
+.site-navigation .catalog-menu:active .popup-catalog-menu,
+.site-navigation .catalog-menu:hover .popup-catalog-menu,
 .catalog-menu:focus .popup-catalog-menu {
   display: block;
 }
@@ -108,7 +108,7 @@ main .button,
   padding-top: 24px;
   display:none;
   background: transparent;
-  z-index: 1020;
+  z-index: 1;
   top: 20px;
   left: -5px;
 
@@ -201,7 +201,11 @@ main .button,
 .modal{
   display: none;
 }
-
+.subscribtion input[type="email"]:not(:empty) {
+  font-size: 16px;
+  list-style: 24px;
+  font-weight: 600;
+}
 
 .appointment-form input[type="password"],
 .appointment-form input[type="email"],
@@ -364,7 +368,7 @@ background-color: #ffffff;
 .main-background-label{
   height: 24px;
   position: absolute;
-  z-index: 1000;
+  z-index: 1;
   bottom: 290px;
 }
 .slider-pagination-item{
@@ -640,7 +644,7 @@ html, body{
 .main-header{
   min-height: 120px;
   position: relative;
-  z-index: 999;
+  z-index: 1;
 }
 .main-navigation-wrapper{
   display: flex;
@@ -797,7 +801,7 @@ html, body{
   border-radius: 5px;
   background-color: transparent;
   padding:0;
-  z-index: 1020;
+  z-index: 3;
 }
 .popup-search{
   background-color: #ffffff;
@@ -825,7 +829,7 @@ html, body{
   bottom: -216px;
   background-color: transparent;
   padding:0;
-  z-index: 1010;
+  z-index: 2;
 }
 .login-popup{
   background-color: #ffffff;
@@ -951,7 +955,7 @@ html, body{
   top: 35px;
   background-color: transparent;
   padding-top:12px;
-  z-index: 1030;
+  z-index: 4;
 }
 .basket-popup{
   background-color: #ffffff;
@@ -1034,7 +1038,7 @@ html, body{
 .promo{
   display: flex;
   position: relative;
-  z-index: 1000;
+  z-index: 3;
   justify-content: space-between;
   margin-bottom: 65px;
 }
@@ -1067,7 +1071,7 @@ html, body{
 }
 .catalog-item:hover{
   background-color: rgba(255, 255, 255, 0.2);
-  z-index: 101;
+  z-index: 2;
 }
 .button-wrap{
   display: none;
@@ -1233,6 +1237,7 @@ html, body{
   position: absolute;
   bottom: 35px;
 }
+
 .subscribtion-email[placeholder]{
   font-size: 14px;
   line-height: 24px;
@@ -1369,6 +1374,7 @@ html, body{
   background-repeat: no-repeat;
   background-position:  center;
   opacity: 0.8;
+  cursor: pointer;
 }
 .footer-social li:hover{
   opacity: 1;
