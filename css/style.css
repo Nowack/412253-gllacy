@@ -943,15 +943,15 @@ html, body{
   display: block;
 }
 .basket-wrapper{
-display: none;
-height: 243px;
-width: 542px;
-position: absolute;
-right: 0;
-top: 35px;
-background-color: transparent;
-padding-top:12px;
-z-index: 1030;
+  display: none;
+  height: 243px;
+  width: 542px;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background-color: transparent;
+  padding-top:12px;
+  z-index: 1030;
 }
 .basket-popup{
   background-color: #ffffff;
@@ -1031,12 +1031,6 @@ z-index: 1030;
 }
 
 
-
-
-
-
-
-
 .promo{
   display: flex;
   position: relative;
@@ -1044,7 +1038,6 @@ z-index: 1030;
   justify-content: space-between;
   margin-bottom: 65px;
 }
-
 
 
 .catalog-list{
@@ -1370,11 +1363,11 @@ z-index: 1030;
   margin: 0;
   box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  height: 38px;
-  width: 38px;
+  height: 37px;
+  width: 37px;
   margin-right: 10px;
   background-repeat: no-repeat;
-  background-position: 3px 3px;
+  background-position:  center;
   opacity: 0.8;
 }
 .footer-social li:hover{
