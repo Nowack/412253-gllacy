@@ -23,10 +23,10 @@
                 <img src="img/logo.png" alt="Логотип магазина 'Глэйси'" width="154" height="64">
               </a>
               <ul class="site-navigation">
-                <li class="catalog-menu"><a href="#">Каталог</a>
+                <li class="catalog-menu"><a href="catalog.html">Каталог</a>
                   <ul class="popup popup-catalog-menu dropdown">
                         <li><a href="#">Новинки</a></li>
-                        <li><a href="catalog.html">Сливочное</a></li>
+                        <li><a href="#">Сливочное</a></li>
                         <li><a href="#">Щербеты</a></li>
                         <li><a href="#">Фруктовый лёд</a></li>
                         <li><a href="#">Мелорин</a></li>
@@ -296,23 +296,33 @@
         </div>
       </footer>
     </div>
+
+
+    <button class="modal-cloze" type="button" name="modal-cloze"><span class="visually-hidden">Закрыть</span></button>
     <section class="modal">
-      <h2 class="modal modal-feedback">Мы обязательно вам ответим!</h2>
-      <form class="feedback-form" action="https://echo.htmlacatemy.ru" method="post">
-        <p>
-          <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
-          <input type="text" id="feedback-name" name="name" placeholder="Как вас зовут?">
-        </p>
-        <p>
-          <label for="feedback-email" class="visually-hidden">Ваша почта для ответа?</label>
-          <input type="email" id="feedback-email" name="email" placeholder="Ваша почта для ответа?">
-        </p>
-        <p>
-          <label for="feedback-textarea" class="visually-hidden">Напишите что-нибудь...</label>
-          <textarea id="feedback-textarea" name="feedback-textarea" rows="8" cols="80" placeholder="Напишите что-нибудь..."></textarea>
-        </p>
-        <input class="button" type="submit" name="feedback-btn" value="Отправить">
-      </form>
+      <div class="modal-background"></div>
+      <div class="feedback-wrapper">
+        <div class="modal-feedback">
+          <h2>Мы обязательно вам ответим!</h2>
+
+
+          <form class="feedback-form" action="https://echo.htmlacatemy.ru" method="post">
+            <p>
+              <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
+              <input type="text" id="feedback-name" class="feedback-name" name="name" placeholder="Как вас зовут?">
+            </p>
+            <p>
+              <label for="feedback-email" class="visually-hidden">Ваша почта для ответа?</label>
+              <input type="email" id="feedback-email" class="feedback-email" name="email" placeholder="Ваша почта для ответа?">
+            </p>
+            <p>
+              <label for="feedback-textarea" class="visually-hidden">Напишите что-нибудь...</label>
+              <textarea id="feedback-textarea" class="feedback-textarea" name="feedback-textarea" rows="8" cols="80" placeholder="Напишите что-нибудь..."></textarea>
+            </p>
+            <input class="button" type="submit" name="feedback-btn" value="Отправить">
+          </form>
+        </div>
+      </div>
     </section>
 
   </body>

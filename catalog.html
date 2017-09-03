@@ -131,63 +131,94 @@
         <form class="filter" action="https://echo.htmlacademy.ru" method="get" oninput="range-cost-output-min.value=range-cost.value">
 
           <fieldset class="filter-option filter-selection">
-            <legend>
-              <label for="selection">Сортировка:</label>
-            </legend>
-            <select name="selection" id="selection">
-              <option value="selection-popular" selected>по популярности</option>
-              <option value="selection-low-cost">сначала недорогие</option>
-              <option value="selection-expensive-cost">сначала дорогие</option>
-              <option value="selection-fat-content">по жирности</option>
-            </select>
-          </fieldset>
-
-          <fieldset class="filter-option filter-range-cost">
-            <legend>
-              <label for="range-cost">
-                Цена: <b>100</b> руб. - <b>500</b> руб.
+            <legend>Сортировка:</legend>
+            <div class="filter-selection-wrap">
+              <label>
+                <select name="selection" name="filter-select" class="filter-select">
+                  <option value="selection-popular" selected>по популярности</option>
+                  <option value="selection-low-cost">сначала недорогие</option>
+                  <option value="selection-expensive-cost">сначала дорогие</option>
+                  <option value="selection-fat-content">по жирности</option>
+                </select>
+              <span class="visually-hidden">Сортировка:</span>
               </label>
-            </legend>
-            <input type="range" name="cost" id="range-cost" min="0" max="700" step="1" >
-            <div class="output-area">
-                <output name="range-cost-output-min"></output>
             </div>
           </fieldset>
 
-          <fieldset class="filter-option">
+          <fieldset class="filter-option filter-range-cost">
+            <legend> Цена: 100 руб. - 500 руб.</legend>
+              <div class="filter-range-wrap">
+                <label for="range-cost"></label>
+                <output name="range-cost-output-min"></output>
+                <input type="range" name="cost" class="filter-range" id="range-cost" min="0" max="700" step="1" >
+              </div>
+          </fieldset>
+
+          <fieldset class="filter-option filter-radio">
             <legend>Жирность:</legend>
-            <p>
-              <label for="fat-0">0%</label>
-              <input type="radio" name="choice-fat" id="fat-0" value="0%">
-            </p>
-            <p>
-              <label for="fat-until-10">до 10%</label>
-              <input type="radio" name="choice-fat" id="fat-until-10" value="until-10%" checked>
-            </p>
-            <p>
-              <label for="fat-until-30">до 30%</label>
-              <input type="radio" name="choice-fat" id="fat-until-30" value="until-30%">
-            </p>
-            <p>
-              <label for="fat-above-30">выше 30%</label>
-              <input type="radio" name="choice-fat" id="fat-above-30" value="above-30">
-            </p>
+              <div class="filter-radio-wrap">
+                <label>
+                  <input type="radio" class="visually-hidden" name="choice-fat" value="0%">
+                  <span class="radio-indicator"></span>
+                  0%
+                </label>
+                <label>
+                  <input type="radio" class="visually-hidden" name="choice-fat" value="until-10%" checked>
+                  <span class="radio-indicator"></span>
+                  до 10%
+                </label>
+                <label>
+                  <input type="radio" class="visually-hidden" name="choice-fat" value="until-30%">
+                  <span class="radio-indicator"></span>
+                  до 30%
+                </label>
+                <label >
+                  <input type="radio" class="visually-hidden" name="choice-fat" value="above-30">
+                  <span class="radio-indicator"></span>
+                  выше 30%
+                </label>
+              </div>
+
           </fieldset>
 
           <fieldset class="filter-option filter-check">
             <legend>Наполнители:</legend>
-              <label for="chocolate">шоколадные</label>
-              <input type="checkbox" name="chocolate" id="chocolate" value="chocolate" checked>
-              <label for="sugar">сахарные присыпки</label>
-              <input type="checkbox" name="sugar" id="sugar" value="sugar" checked>
-              <label for="fruit">фрукты</label>
-              <input type="checkbox" name="fruit" id="fruit" value="fruit">
-              <label for="syrup">сиропы</label>
-              <input type="checkbox" name="syrup" id="syrup" value="syrup">
-              <label for="jam">джемы</label>
-              <input type="checkbox" name="jam" id="jam" value="jam">
+              <div class="filter-check-wrap">
+
+                <label>
+                  <input type="checkbox" class="visually-hidden" name="chocolate" value="chocolate" checked>
+                  <span class="checkbox-indicator"></span>
+                  шоколадные
+                </label>
+
+                <label>
+                  <input type="checkbox" class="visually-hidden" name="sugar" value="sugar" checked>
+                  <span class="checkbox-indicator"></span>
+                  сахарные присыпки
+                </label>
+
+                <label>
+                  <input type="checkbox" class="visually-hidden" name="fruit" value="fruit">
+                  <span class="checkbox-indicator"></span>
+                  фрукты
+                </label>
+
+                <label>
+                  <input type="checkbox" class="visually-hidden" name="syrup" value="syrup">
+                  <span class="checkbox-indicator"></span>
+                  сиропы
+                </label>
+
+                <label>
+                  <input type="checkbox" class="visually-hidden" name="jam" value="jam">
+                  <span class="checkbox-indicator"></span>
+                  джемы
+                </label>
+
+              </div>
+              <input class="filter-option form-button" type="submit" name="apply" value="Применить">
           </fieldset>
-          <input class="filter-option form-button" type="submit" name="apply" value="Применить">
+
         </form>
       </section>
 
