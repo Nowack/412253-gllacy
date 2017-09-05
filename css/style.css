@@ -441,6 +441,9 @@ main .button,
   background-position: center;
   cursor: pointer;
 }
+.search-link a:focus{
+  box-shadow: 0 0 1px #1e90ff;
+}
 .search-link:hover .search-wrapper{
   display: block;
 }
@@ -1298,8 +1301,7 @@ background-color: #ffffff;
   width: 688px;
 }
 .filter-check label,
-.filter-radio label,
-.filter-selection label{
+.filter-radio label{
    display: inline-block;
    position: relative;
    height: 19px;
@@ -1482,7 +1484,7 @@ background-color: #ffffff;
 }
 .filter-selection-wrap,
 .filter-range-wrap{
-  position: relative;
+      position: relative;
       display: block;
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 30px;
@@ -1490,22 +1492,17 @@ background-color: #ffffff;
       width: 193px;
       height: 36px;
 }
-
-
 .filter-selection-wrap:hover,
 .filter-range-wrap:focus{
   background-color: #ffffff;
 }
-
 .filter-selection{
   width: 194px;
   margin: 0;
   padding: 0;
-
 }
 .filter-select{
   border-radius: 30px;
-  padding: 0 16px 0 16px;
   font: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -1519,9 +1516,54 @@ background-color: #ffffff;
   box-sizing: border-box;
   margin-left: -38px;
 }
-.filter-select:hover,
 .filter-select:focus{
+  box-shadow: 0 0 0 1px #1e90ff;
+}
+.filter-select:active{
+  border-color: transparent;
+  cursor: pointer;
+}
+.filter-selection-wrap select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 7px 18px;
+  margin-left: 0;
+  outline: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  font: inherit;
+
+}
+.selection-label{
+  position: relative;
+}
+.select-corner{
+    position: relative;
+}
+.select-corner::after{
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  border-width: 9px 5px 0 5px;
+  bottom: 14px;
+  right: 14px;
+  z-index: 1;
+  pointer-events: none;
+}
+.selection-label:hover .filter-select,
+.selection-label:focus .filter-select{
   color: #323232;
+  font-weight: 500;
+}
+.selection-label:hover .select-corner::after{
+  border-color: #333333 transparent;
+}
+.filter-select:hover .select-corner::after,
+.filter-select:hover .select-corner::after{
+  border-color: #333333 transparent;
 }
 
 .filter-range-cost{
@@ -1650,7 +1692,9 @@ background-color: #ffffff;
   opacity: 0.8;
   cursor: pointer;
 }
-.footer-social li:hover{
+.footer-social li:hover,
+.footer-social li:focus,
+.footer-social li:active{
   opacity: 1;
 }
 .footer-social li:nth-child(1){
