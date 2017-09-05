@@ -24,8 +24,8 @@
               </a>
               <ul class="site-navigation">
                 <li class="catalog-menu"><a href="catalog.html">Каталог</a>
-                  <ul class="popup popup-catalog-menu dropdown">
-                        <li><a href="#">Новинки</a></li>
+                  <ul class="popup popup-catalog-menu">
+                        <li><a>Новинки</a></li>
                         <li><a href="#">Сливочное</a></li>
                         <li><a href="#">Щербеты</a></li>
                         <li><a href="#">Фруктовый лёд</a></li>
@@ -34,10 +34,11 @@
                 </li>
                 <li><a href="payment_and_delivery.html">Доставка и оплата</a></li>
                 <li><a href="about-company.html">О Компании</a></li>
+
               </ul>
               <ul class="user-navigation">
                 <li class="search-link">
-                  <a class="search-link-button"><span class="visually-hidden">Поиск</span></a>
+                  <button type="button" class="search-link-button"><span class="visually-hidden">Поиск</span></button>
                   <div class="popup search-wrapper">
                     <div class=" popup-search">
                         <form class="search-form" action="https://echo.htmlacatemy.ru" method="get">
@@ -298,13 +299,13 @@
     </div>
 
 
-    <button class="modal-cloze" type="button" name="modal-cloze"><span class="visually-hidden">Закрыть</span></button>
     <section class="modal">
       <div class="modal-background"></div>
       <div class="feedback-wrapper">
         <div class="modal-feedback">
           <h2>Мы обязательно вам ответим!</h2>
 
+          <button class="modal-cloze" type="button" name="modal-cloze"><span class="visually-hidden">Закрыть</span></button>
 
           <form class="feedback-form" action="https://echo.htmlacatemy.ru" method="post">
             <p>
@@ -317,7 +318,7 @@
             </p>
             <p>
               <label for="feedback-textarea" class="visually-hidden">Напишите что-нибудь...</label>
-              <textarea id="feedback-textarea" class="feedback-textarea" name="feedback-textarea" rows="8" cols="80" placeholder="Напишите что-нибудь..."></textarea>
+              <textarea id="feedback-textarea" rows="5" class="feedback-textarea" name="feedback-textarea" rows="8" cols="80" placeholder="Напишите что-нибудь..."></textarea>
             </p>
             <input class="button" type="submit" name="feedback-btn" value="Отправить">
           </form>
