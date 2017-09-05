@@ -1266,7 +1266,9 @@ background-color: #ffffff;
 }
 .filter{
   display: flex;
+  flex-basis: 880px;
   flex-wrap: wrap;
+
 }
  .filter fieldset{
   border: none;
@@ -1282,6 +1284,9 @@ background-color: #ffffff;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+}
+.filter-radio legend{
+  margin-left: 12px;
 }
 .filter-check-wrap,
 .filter-radio-wrap{
@@ -1404,24 +1409,89 @@ background-color: #ffffff;
 }
 .filter-radio input[type="radio"]:checked + .radio-indicator::before{
   border-radius: 50%;
-  width: 9px;
-  height: 9px;
-  top: 3px;
+  width: 8px;
+  height: 8px;
+  top: 4px;
   left: 4px;
 }
 .filter-radio label{
   margin-right: 11px;
 }
+
+.filter-range{
+  margin: 14px 16px -5px 0;
+  width: 220px;
+  height: 65px;
+  padding: 0;
+  margin-left: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+.price-controls {
+  height: 25px;
+  white-space: nowrap;
+  border: none;
+  margin-left: 15px;
+}
+
+.filter-range input{
+  width: 27px;
+  text-align: right;
+  display: inline-block;
+  font: inherit;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  margin: 0 3px;
+}
+.filter-range-wrap{
+  padding: 0 22px;
+  overflow: hidden;
+}
+.filter-range-wrap .scale{
+  margin-top: 16px;
+  height: 4px;
+  background-color: #f8f7f4;
+  opacity: 0.5;
+}
+.filter-range-wrap .bar{
+  height: 4px;
+  background-color: #f8f7f4;
+  opacity: 1;
+}
+.filter-range-wrap .toggle{
+  height: 4px;
+  width: 4px;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 21px;
+  box-shadow: 0 2px 1px #ababab;
+  cursor: pointer;
+}
+.filter-range-wrap .min-toggle{
+  left: 34px;
+}
+.filter-range-wrap .max-toggle{
+  left: 132px;
+}
 .filter-selection-wrap,
 .filter-range-wrap{
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
-  margin: 0;
-
-  width: 193px;
-  height: 36px;
+  position: relative;
+      display: block;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 30px;
+      margin: 0;
+      width: 193px;
+      height: 36px;
 }
+
+
 .filter-selection-wrap:hover,
 .filter-range-wrap:focus{
   background-color: #ffffff;
@@ -1431,6 +1501,7 @@ background-color: #ffffff;
   width: 194px;
   margin: 0;
   padding: 0;
+
 }
 .filter-select{
   border-radius: 30px;
@@ -1459,18 +1530,6 @@ background-color: #ffffff;
 .filter-range-wrap{
   width: 176px;
   padding: 0 21px;
-
-}
-.filter-range:hover,
-.filter-range:focus{
-  opacity: 1;
-}
-.filter-range{
-  width: 174px;
-  border: 1px solid rgba(169, 185, 175, 0.1);
-  margin-top: 7px;
-  color: #ffffff;
-  opacity: 0.8;
 }
 
 
