@@ -30,7 +30,7 @@ main .button,
   line-height: 24px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 2px 1px rgba(160, 32, 11, 0.7);
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.8);
   vertical-align: baseline;
   background: #f26843; /* Old browsers */
   background: linear-gradient(to bottom, #f26843 0%,#e74a35 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -312,12 +312,14 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   background-color: #ffffff;
   font-size: 14px;
   line-height: 16px;
-
+  position: relative;
+  z-index: 4;
 }
 .popup-catalog-menu li:hover,
 .popup-catalog-menu li:focus{
   background-color: #fbded8;
-  z-index: 10;
+  position: relative;
+  z-index: 4;
 }
 .popup-catalog-menu li:active{
   background-color: #f6b5a5;
@@ -355,7 +357,8 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   vertical-align: middle;
   border: none;
   border-radius: 0;
-
+  position: relative;
+  z-index: 5;
 }
 
 .site-navigation .popup-catalog-menu a:active{
@@ -550,8 +553,8 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   background-position: 16px 7px;
 }
 .basket-link-full a,
-.basket-link-full:hover a,
-.basket-link-full:focus a{
+.basket-link-full:hover > a,
+.basket-link-full:focus > a{
   padding-left: 45px;
   padding-right: 19px;
   color: #323232;
