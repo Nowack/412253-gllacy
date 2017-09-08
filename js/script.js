@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
   var link = document.querySelector(".feedback-link");
   var popup = document.querySelector(".feedback-modal");
   var close = document.querySelector(".modal-close");
@@ -14,4 +14,3 @@
     popup.classList.remove("modal-show");
     }
   );
-</script>
