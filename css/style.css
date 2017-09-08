@@ -518,15 +518,15 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   width: 276px;
   position: absolute;
   right: 0;
-  top: 41px;
+  top: 38px;
   background-color: transparent;
   padding:0;
   z-index: 2;
 }
 .login-popup{
-  height: 216px;
+  height: 214px;
   background-color: #ffffff;
-  margin: 0;
+  margin-top: 4px;
   padding: 0;
   border-radius: 5px;
   position: relative;
@@ -545,7 +545,6 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .login-popup .button{
   margin-top: 5px;
   float: left;
-  display: inline-block;
 }
 .login-link{
   position: relative;
@@ -580,7 +579,6 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .restore-wrapper{
   padding: 0;
   height: 44px;
-  display: inline-block;
   list-style: none;
   float: right;
 }
@@ -1230,7 +1228,6 @@ background-color: #ffffff;
   padding-left: 16px;
   padding-right: 16px;
   cursor: pointer;
-  display: inline-block;
   float: right;
 }
 .subscribtion-wrap .button:focus{
@@ -2032,7 +2029,6 @@ top: 4px;
   padding: 8px 12px 22px 13px;
 }
 .feedback-modal .button{
-  display: inline-block;
   float: right;
   margin-top: 22px;
 }
