@@ -43,7 +43,7 @@
                     <div class="popup-search">
                         <form class="search-form" action="https://echo.htmlacatemy.ru" method="get">
                           <div class="">
-                            <input type="search" id="input-search" name="input-search"  class="input-search" placeholder="Что ищем?">
+                            <input type="search" id="input-search" name="input-search"  class="input-search" placeholder="Что ищем?" required>
                             <div class="label-box">
                               <label for="input-search">Что ищем?</label>
                             </div>
@@ -60,13 +60,13 @@
                       <h2 class="visually-hidden">Вход в личный кабинет</h2>
                       <form class="appointment-form" action="https://echo.htmlacatemy.ru" method="post">
                           <div>
-                            <input class="login-icon-email" type="email" id="appointment-email" name="email" placeholder="Электронная почта">
+                            <input class="login-icon-email" type="email" id="appointment-email" name="email" placeholder="Электронная почта" required>
                             <div class="label-box">
                               <label for="appointment-email">Электронная почта</label>
                             </div>
                           </div>
                           <div>
-                            <input class="login-icon-password" type="password" id="appointment-password" name="password" placeholder="Пароль">
+                            <input class="login-icon-password" type="password" id="appointment-password" name="password" placeholder="Пароль" required>
                             <div class="label-box">
                               <label for="appointment-password">Пароль</label>
                             </div>
@@ -244,7 +244,7 @@
                   Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                 </p>
                 <form class="subscribtion-form" action="https://echo.htmlacatemy.ru" method="get">
-                    <input class="subscribtion-email" type="email" name="email" id="subscribtion-email" placeholder="Электронная почта">
+                    <input class="subscribtion-email" type="email" name="email" id="subscribtion-email" placeholder="Электронная почта" required>
                     <div class="label-box">
                       <label for="subscribtion-email">Электронная почта</label>
                     </div>
@@ -317,19 +317,19 @@
 
           <form class="feedback-form" action="https://echo.htmlacatemy.ru" method="post">
               <div>
-                <input type="text" id="feedback-name" class="feedback-name" name="name" placeholder="Как вас зовут?">
+                <input type="text" id="feedback-name" class="feedback-name" name="name" placeholder="Как вас зовут?" required>
                 <div class="label-box">
                   <label for="feedback-name">Как вас зовут?</label>
                 </div>
               </div>
               <div class="thomething-wrap">
-                <input type="email" id="feedback-email" class="feedback-email" name="email" placeholder="Ваша почта для ответа?">
+                <input type="email" id="feedback-email" class="feedback-email" name="email" placeholder="Ваша почта для ответа?" required>
                 <div class="label-box">
                   <label for="feedback-email">Ваша почта для ответа?</label>
                 </div>
               </div>
               <div class="textarea-wrap">
-                <textarea id="feedback-textarea" class="feedback-textarea" name="feedback-textarea" rows="5" cols="80" placeholder="Напишите что-нибудь..."></textarea>
+                <textarea id="feedback-textarea" class="feedback-textarea" name="feedback-textarea" rows="5" cols="80" placeholder="Напишите что-нибудь..." required></textarea>
                 <label  class="textarea-label" for="feedback-textarea">Напишите что-нибудь...</label>
               </div>
             <input class="button" type="submit" name="feedback-btn" value="Отправить">

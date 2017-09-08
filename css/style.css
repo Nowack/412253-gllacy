@@ -74,6 +74,31 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 :focus:-moz-placeholder           {color: transparent}
 :focus:-ms-input-placeholder      {color: transparent}
 
+input:not(:focus):invalid[placeholder],
+textarea:not(:focus):invalid[placeholder] {
+    color: #323232;
+    font-weight: 400;
+}
+
+input:not(:focus):valid[placeholder],
+textarea:not(:focus):valid[placeholder] {
+    color: #323232;
+    font-weight: 600;
+}
+
+input:not(:focus):valid[placeholder]~.label-box label,
+textarea:not(:focus):valid[placeholder]~.label-box label {
+    opacity: 1;
+}
+
+input:focus:invalid ~ .label-box label,
+input:focus:valid ~ .label-box label,
+textarea:focus:invalid ~ label,
+textarea:focus:valid ~ label{
+  opacity: 1;
+  color: #5b9ddf;
+}
+
 .login-icon-email[placeholder],
 .login-icon-password[placeholder],
 .input-search[placeholder],
@@ -92,15 +117,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .feedback-email[placeholder]{
   font-size: 16px;
 }
-input:not(:focus):invalid[placeholder],
-textarea:not(:focus):invalid[placeholder]{
-  color: #323232;
-  font-weight: 600;
-}
-:-ms-input:not(:focus):invalid[placeholder]{
-  color: #323232;
-  font-weight: 600;
-}
+
 .label-box label,
 .textarea-wrap label{
   position: absolute;
@@ -112,18 +129,7 @@ textarea:not(:focus):invalid[placeholder]{
   line-height: 13px;
   font-weight: 400;
 }
-input:not(:focus):invalid ~ .label-box label,
-textarea:not(:focus):valid ~ label{
-  opacity: 1;
-  border: none;
-}
-input:focus:invalid ~ .label-box label,
-input:focus:valid ~ .label-box label,
-textarea:focus:invalid ~ label,
-textarea:focus:valid ~ label{
-  opacity: 1;
-  color: #5b9ddf;
-}
+
 
 
 .label-box {
