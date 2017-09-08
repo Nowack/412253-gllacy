@@ -119,7 +119,7 @@ textarea:focus:valid ~ label{
   position: absolute;
   top: -6px;
   left: 13px;
-  color: rgba(225, 225, 225, 0);
+  opacity: 0;
   font-size: 11px;
   line-height: 13px;
   font-weight: 400;
