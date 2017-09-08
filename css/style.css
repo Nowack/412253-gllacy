@@ -145,9 +145,6 @@ textarea:focus:valid ~ label{
   top: -60px;
   left: 14px;
 }
-.feedback-form .label-box .textarea-label{
-  top: -172px;
-}
 
 
 
