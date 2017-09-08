@@ -49,11 +49,7 @@ main .button,
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26843', endColorstr='#e74a35',GradientType=0 ); /* IE6-9 */
   box-shadow: 0 2px 2px 0 #ac1000;
 }
-.button:focus{
-  opacity: 1;
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
+
 .button:active,
 .login-popup .button:active,
 .basket-popup .button:active,
@@ -80,46 +76,48 @@ input:not(:focus):invalid[placeholder]{
   font-weight: 600;
 }
 input:not(:focus):invalid ~ .label-box label,
-input:not(:focus):valid ~ .label-box label{
+textarea:not(:focus):invalid ~ .feedback-form .label-box .textarea-label{
   opacity: 1;
+  color: #999999;
+  border: none;
 }
 input:focus:invalid ~ .label-box label,
-input:focus:valid ~ .label-box label{
+input:focus:valid ~ .label-box label,
+
+textarea:focus:invalid ~ .feedback-form .label-box .textarea-label,
+textarea:focus:valid ~ .feedback-form .label-box .textarea-label{
   opacity: 1;
   color: #5b9ddf;
 }
 
-input:focus ~  .label-box label,
-input:valid ~  .label-box label {
-  display: block;
-  transform: translateY(-5px);
-}
 
 .label-box {
   position: relative;
   width: 270px;
 }
 .search-form .label-box label{
-  top: -94px;
+  top: -79px;
   left: 28px;
 }
 .appointment-form .label-box label{
   top: -74px;
   left: 32px;
 }
+.subscribtion-form .label-box label{
+  top: -17px;
+}
 .feedback-form .label-box label{
-  top: -74px;
+  top: -60px;
   left: 14px;
 }
 .feedback-form .label-box .textarea-label{
-  top: -202px;
+  top: -172px;
 }
 .label-box label{
   position: absolute;
   top: -6px;
   left: 13px;
-  color: #999999;
-  opacity: 0;
+  color: rgba(225, 225, 225, 0);
   font-size: 11px;
   line-height: 13px;
   font-weight: 400;
@@ -497,7 +495,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 }
 .popup-search{
   background-color: #ffffff;
-  margin: 0;
+  margin-top: 17px;
   padding: 0;
   border-radius: 5px;
 }
@@ -518,13 +516,13 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   width: 276px;
   position: absolute;
   right: 0;
-  top: 25px;
+  top: 41px;
   background-color: transparent;
   padding:0;
   z-index: 2;
 }
 .login-popup{
-  height: 214px;
+  height: 216px;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -536,15 +534,16 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   width: 214px;
   margin-left: 19px;
   margin-top: 20px;
+  margin-bottom: 17px;
 }
 .login-icon-password{
   margin-top: 5px;
 }
 
 .login-popup .button{
-  margin-left: 19px;
-  margin-top: 6px;
-  padding:
+  margin-top: 5px;
+  float: left;
+  display: inline-block;
 }
 .login-link{
   position: relative;
@@ -570,13 +569,18 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   background-repeat: no-repeat;
   background-position: 17px 7px;
 }
-
+.appointment-form .column-wrap{
+  height: 44px;
+  margin: 0;
+  padding-left: 19px;
+  padding-right: 17px;
+}
 .restore-wrapper{
   padding: 0;
   height: 44px;
-  position: absolute;
-  bottom: 26px;
-  right: 20px;
+  display: inline-block;
+  list-style: none;
+  float: right;
 }
 .restore-wrapper a{
   display: inline;
@@ -726,8 +730,6 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
   transform: rotate(-45deg);
 }
 .column-wrapper{
-float: right;
-margin: 25px 2px;
 font-size: 15px;
 line-height: 18px;
 font-weight: 600;
@@ -740,6 +742,7 @@ font-weight: 600;
   position: relative;
   position: relative;
   z-index: 1;
+  min-width: 300px;
 }
 .inner-page .contact-us-briefly{
   margin-top: -51px;
@@ -1210,22 +1213,23 @@ background-color: #ffffff;
   margin: 0;
   padding-top: 28px;
 }
-
+.subscribtion-form{
+  height: 44px;
+  margin-top: 40px;
+  margin-right: 10px;
+}
 .subscribtion-email{
   margin: 0;
   width: 340px;
-
-  position: absolute;
-  bottom: 35px;
+  float: left;
 }
 
 .subscribtion-wrap .button{
-  position: absolute;
   padding-left: 16px;
   padding-right: 16px;
-  bottom: 35px;
-  right: 20px;
   cursor: pointer;
+  display: inline-block;
+  float: right;
 }
 .subscribtion-wrap .button:focus{
   opacity: 1;
@@ -1312,9 +1316,9 @@ background-color: #ffffff;
 
 .breadcrumbs{
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
-  flex-basis: 267px;
+  width: 300px;
   padding: 0;
   font-size: 14px;
   line-height: 16px;
@@ -1322,6 +1326,7 @@ background-color: #ffffff;
 }
 .breadcrumbs li{
   list-style: none;
+
 }
 .breadcrumbs a{
   color: #ffffff;
@@ -1482,7 +1487,8 @@ background-color: #ffffff;
   text-align: center;
   border: 2px solid #ffffff;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.2)
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 .filters .form-button:hover,
 .filters .form-button:focus{
@@ -1577,10 +1583,7 @@ background-color: #ffffff;
   cursor: pointer;
 }
 .filter-range-wrap .toggle:hover  {
-  height: 5px;
-  width: 5px;
-  border-width: 9px;
-  top: 7px;
+  transform: scale(1.2);
 }
 .filter-range-wrap .min-toggle:hover{
   left: 33px;
@@ -1803,7 +1806,7 @@ select::-ms-expand {
 }
 .pagination-next::after{
   transform: rotate(-45deg);
-  top: 16px;px;
+  top: 16px;
 }
 
 
@@ -1957,9 +1960,10 @@ select::-ms-expand {
 }
 .modal-feedback {
   position: absolute;
-  width: 454px;
-  padding-bottom: 75px;
+  width: 427px;
+  padding-bottom: 26px;
   padding-left: 24px;
+  padding-right: 24px;
   border-radius: 15px;
   background-color: #f8f7f4;
 }
@@ -2003,7 +2007,8 @@ select::-ms-expand {
 .feedback-name,
 .feedback-email,
 .feedback-textarea{
-  margin-top: 5px;
+  margin-top: 20px;
+  margin-bottom: 3px;
 }
 .modal .feedback-name,
 .modal .feedback-email{
@@ -2012,11 +2017,10 @@ select::-ms-expand {
 .modal .feedback-textarea{
   width: 400px;
   margin-bottom: 0;
-  padding: 10px 12px 22px 13px;
-  rows: 10px;
+  padding: 8px 12px 22px 13px;
 }
 .modal .button{
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
+  display: inline-block;
+  float: right;
+  margin-top: 22px;
 }
