@@ -19,7 +19,7 @@ a{
 main .button,
 .login-popup .button,
 .basket-popup .button,
-.modal .button{
+.feedback-modal .button{
   display: inline-block;
   border: none;
   border-radius: 30px;
@@ -42,8 +42,8 @@ main .button,
 .login-popup .button:focus,
 .basket-popup .button:hover,
 .basket-popup .button:focus,
-.modal .button:hover,
-.modal .button:focus{
+.feedback-modal .button:hover,
+.feedback-modal .button:focus{
   background: #f26843; /* Old browsers */
   background: linear-gradient(to bottom, #f26843 0%,#e74a35 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26843', endColorstr='#e74a35',GradientType=0 ); /* IE6-9 */
@@ -53,7 +53,7 @@ main .button,
 .button:active,
 .login-popup .button:active,
 .basket-popup .button:active,
-.modal .button:active{
+.feedback-modal .button:active{
   background: #f26843; /* Old browsers */
   background: linear-gradient(to bottom, #f26843 0%,#e74a35 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26843', endColorstr='#e74a35',GradientType=0 ); /* IE6-9 */
@@ -67,7 +67,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26843', end
 :-ms-input-placeholder      {color:#999999; font-weight: 400; font-size: 16px; line-height: 24px; font:inherit;}
 
 
-input:not(:focus):invalid[placeholder]{
+input:not(:focus):invalid[placeholder],
+textarea:not(:focus):invalid[placeholder]{
   color: #323232;
   font-weight: 600;
 }
@@ -76,7 +77,7 @@ input:not(:focus):invalid[placeholder]{
   font-weight: 600;
 }
 input:not(:focus):invalid ~ .label-box label,
-textarea:not(:focus):invalid ~ .feedback-form .label-box .textarea-label{
+textarea:not(focus):valid ~ label{
   opacity: 1;
   color: #999999;
   border: none;
@@ -84,8 +85,8 @@ textarea:not(:focus):invalid ~ .feedback-form .label-box .textarea-label{
 input:focus:invalid ~ .label-box label,
 input:focus:valid ~ .label-box label,
 
-textarea:focus:invalid ~ .feedback-form .label-box .textarea-label,
-textarea:focus:valid ~ .feedback-form .label-box .textarea-label{
+textarea:focus:invalid ~ label,
+textarea:focus:valid ~ label{
   opacity: 1;
   color: #5b9ddf;
 }
@@ -113,7 +114,8 @@ textarea:focus:valid ~ .feedback-form .label-box .textarea-label{
 .feedback-form .label-box .textarea-label{
   top: -172px;
 }
-.label-box label{
+.label-box label,
+.textarea-wrap label{
   position: absolute;
   top: -6px;
   left: 13px;
@@ -136,9 +138,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .appointment-form input[type="email"],
 .search-form input[type="search"],
 .subscribtion input[type="email"],
-.modal input[type="email"],
-.modal input[type="text"],
-.modal textarea{
+.feedback-modal input[type="email"],
+.feedback-modal input[type="text"],
+.feedback-modal textarea{
   font:inherit;
   font-size: 16px;
   line-height: 24px;
@@ -158,9 +160,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .appointment-form input[type="email"]:hover,
 .search-form input[type="search"]:hover,
 .subscribtion input[type="email"]:hover,
-.modal input[type="email"]:hover,
-.modal input[type="text"]:hover,
-.modal textarea:hover{
+.feedback-modal input[type="email"]:hover,
+.feedback-modal input[type="text"]:hover,
+.feedback-modal textarea:hover{
   box-shadow: 0 0 0 2px #c7c6c5;
 
 }
@@ -168,9 +170,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 .appointment-form input[type="email"]:focus,
 .search-form input[type="search"]:focus,
 .subscribtion input[type="email"]:focus,
-.modal input[type="email"]:focus,
-.modal input[type="text"]:focus,
-.modal textarea:focus {
+.feedback-modal input[type="email"]:focus,
+.feedback-modal input[type="text"]:focus,
+.feedback-modal textarea:focus {
   box-shadow: 0 0 0 2px #8fbdec;
 }
 
@@ -1931,12 +1933,11 @@ select::-ms-expand {
 
 
 
-.feedback-link:active section.modal{          /**не работает!*/
-  display: block;
-}
-
- .modal{
+.feedback-modal{
   display: none;
+}
+.modal-show{
+  display: block;
 }
 .modal-background {
  position: absolute;
@@ -1967,14 +1968,14 @@ select::-ms-expand {
   border-radius: 15px;
   background-color: #f8f7f4;
 }
-.modal h2{
+.feedback-modal h2{
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
   color: #323232;
   margin-bottom: -3px;
 }
-.modal-cloze{
+.modal-close{
   position: absolute;
   top: 9px;
   right: 13px;
@@ -1986,11 +1987,11 @@ select::-ms-expand {
   background: transparent;
   z-index: 8;
 }
-.modal-cloze:hover .modal{             /**не работает!*/
+.modal-close:hover .feedback-modal{             /**не работает!*/
   display: none;
 }
-.modal-cloze::before,
-.modal-cloze::after{
+.modal-close::before,
+.modal-close::after{
   position: absolute;
   content: "";
   left: 5px;
@@ -1998,10 +1999,10 @@ select::-ms-expand {
   height: 2px;
   background-color: #000000;
 }
-.modal-cloze::before{
+.modal-close::before{
   transform: rotate(-45deg);
 }
-.modal-cloze::after{
+.modal-close::after{
   transform: rotate(45deg);
 }
 .feedback-name,
@@ -2010,16 +2011,27 @@ select::-ms-expand {
   margin-top: 20px;
   margin-bottom: 3px;
 }
-.modal .feedback-name,
-.modal .feedback-email{
+.feedback-modal .feedback-name,
+.feedback-modal .feedback-email{
   width: 237px;
 }
-.modal .feedback-textarea{
+.textarea-wrap {
+position: relative;
+}
+.textarea-wrap .feedback-textarea {
+padding-top: 40px;
+}
+.textarea-wrap label {
+position: absolute;
+top: 4px;
+}
+
+.feedback-modal .feedback-textarea{
   width: 400px;
   margin-bottom: 0;
   padding: 8px 12px 22px 13px;
 }
-.modal .button{
+.feedback-modal .button{
   display: inline-block;
   float: right;
   margin-top: 22px;

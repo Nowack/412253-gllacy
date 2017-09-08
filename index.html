@@ -248,7 +248,7 @@
                     <div class="label-box">
                       <label for="subscribtion-email">Электронная почта</label>
                     </div>
-                  <button class="button" type="submit" name="subscribe">Отправить</button>
+                  <button class="button subscribtion-button" type="submit" name="subscribe">Отправить</button>
                 </form>
               </div>
             </section>
@@ -307,13 +307,13 @@
     </div>
 
 
-    <section class="modal">
+    <section class="feedback-modal">
       <div class="modal-background"></div>
       <div class="feedback-wrapper">
         <div class="modal-feedback">
           <h2>Мы обязательно вам ответим!</h2>
 
-          <button class="modal-cloze" type="button" name="modal-cloze"><span class="visually-hidden">Закрыть</span></button>
+          <button class="modal-close" type="button" name="modal-close"><span class="visually-hidden">Закрыть</span></button>
 
           <form class="feedback-form" action="https://echo.htmlacatemy.ru" method="post">
               <div>
@@ -328,17 +328,34 @@
                   <label for="feedback-email">Ваша почта для ответа?</label>
                 </div>
               </div>
-              <div>
+              <div class="textarea-wrap">
                 <textarea id="feedback-textarea" class="feedback-textarea" name="feedback-textarea" rows="5" cols="80" placeholder="Напишите что-нибудь..."></textarea>
-                <div class="label-box">
-                  <label  class="textarea-label" for="feedback-textarea">Напишите что-нибудь...</label>
-                </div>
+                <label  class="textarea-label" for="feedback-textarea">Напишите что-нибудь...</label>
               </div>
             <input class="button" type="submit" name="feedback-btn" value="Отправить">
           </form>
         </div>
       </div>
     </section>
+
+
+    <script type="text/javascript">
+      var link = document.querySelector(".feedback-link");
+      var popup = document.querySelector(".feedback-modal");
+      var close = document.querySelector(".modal-close");
+
+      link.addEventListener("click", function (evt){
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        }
+      );
+      close.addEventListener("click", function (evt){
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        }
+      );
+
+    </script>
 
   </body>
 </html>
