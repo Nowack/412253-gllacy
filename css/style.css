@@ -65,8 +65,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26843', end
 ::-moz-placeholder          {color:#999999; font-weight: 400; font-size: 16px; line-height: 24px; font:inherit;}/* Firefox 19+ */
 :-moz-placeholder           {color:#999999; font-weight: 400; font-size: 16px; line-height: 24px; font:inherit; vertical-align: bottom;}/* Firefox 18- */
 :-ms-input-placeholder      {color:#999999; font-weight: 400; font-size: 16px; line-height: 24px; font:inherit;}
+input[placeholder]          {text-overflow:ellipsis;}
+input::-moz-placeholder     {text-overflow:ellipsis;}
+input:-moz-placeholder      {text-overflow:ellipsis;}
+input:-ms-input-placeholder {text-overflow:ellipsis;}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
 
-
+.login-icon-email[placeholder],
+.login-icon-password[placeholder],
+.input-search[placeholder],
+.subscribtion-email[placeholder],
+.feedback-name[placeholder],
+.feedback-email[placeholder]{
+  font:inherit;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+  padding: 9px 13px;
+}
+.subscribtion-email[placeholder],
+.feedback-name[placeholder],
+.feedback-email[placeholder]{
+  font-size: 16px;
+}
 input:not(:focus):invalid[placeholder],
 textarea:not(:focus):invalid[placeholder]{
   color: #323232;
@@ -76,8 +101,19 @@ textarea:not(:focus):invalid[placeholder]{
   color: #323232;
   font-weight: 600;
 }
+.label-box label,
+.textarea-wrap label{
+  position: absolute;
+  top: -6px;
+  left: 13px;
+  color: #999999;
+  opacity: 0;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
 input:not(:focus):invalid ~ .label-box label,
-textarea:not(focus):valid ~ label{
+textarea:not(:focus):valid ~ label{
   opacity: 1;
   border: none;
 }
@@ -112,26 +148,8 @@ textarea:focus:valid ~ label{
 .feedback-form .label-box .textarea-label{
   top: -172px;
 }
-.label-box label,
-.textarea-wrap label{
-  position: absolute;
-  top: -6px;
-  left: 13px;
-  color: #999999;
-  opacity: 0;
-  font-size: 11px;
-  line-height: 13px;
-  font-weight: 400;
-}
-input[placeholder]          {text-overflow:ellipsis;}
-input::-moz-placeholder     {text-overflow:ellipsis;}
-input:-moz-placeholder      {text-overflow:ellipsis;}
-input:-ms-input-placeholder {text-overflow:ellipsis;}
 
-:focus::-webkit-input-placeholder {color: transparent}
-:focus::-moz-placeholder          {color: transparent}
-:focus:-moz-placeholder           {color: transparent}
-:focus:-ms-input-placeholder      {color: transparent}
+
 
 .appointment-form input[type="password"],
 .appointment-form input[type="email"],
@@ -176,24 +194,7 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 }
 
 
-.login-icon-email[placeholder],
-.login-icon-password[placeholder],
-.input-search[placeholder],
-.subscribtion-email[placeholder],
-.feedback-name[placeholder],
-.feedback-email[placeholder]{
-  font:inherit;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #999999;
-  padding: 9px 13px;
-}
-.subscribtion-email[placeholder],
-.feedback-name[placeholder],
-.feedback-email[placeholder]{
-  font-size: 16px;
-}
+
 .login-icon-email,
 .login-icon-password{
   position: relative;
