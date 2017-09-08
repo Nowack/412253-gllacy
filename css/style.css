@@ -79,7 +79,6 @@ textarea:not(:focus):invalid[placeholder]{
 input:not(:focus):invalid ~ .label-box label,
 textarea:not(focus):valid ~ label{
   opacity: 1;
-  color: #999999;
   border: none;
 }
 input:focus:invalid ~ .label-box label,
@@ -118,6 +117,7 @@ textarea:focus:valid ~ label{
   position: absolute;
   top: -6px;
   left: 13px;
+  color: #999999;
   opacity: 0;
   font-size: 11px;
   line-height: 13px;
@@ -2016,6 +2016,9 @@ position: relative;
 }
 .textarea-wrap .feedback-textarea {
 padding-top: 40px;
+box-sizing: border-box;
+min-width: 100%;
+max-width: 100%;
 }
 .textarea-wrap label {
 position: absolute;
