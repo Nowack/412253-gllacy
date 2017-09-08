@@ -84,7 +84,6 @@ textarea:not(focus):valid ~ label{
 }
 input:focus:invalid ~ .label-box label,
 input:focus:valid ~ .label-box label,
-
 textarea:focus:invalid ~ label,
 textarea:focus:valid ~ label{
   opacity: 1;
