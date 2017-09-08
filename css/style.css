@@ -74,7 +74,19 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 :focus:-moz-placeholder           {color: transparent}
 :focus:-ms-input-placeholder      {color: transparent}
 
-input:not(:focus):invalid[placeholder],
+.label-box label,
+.textarea-wrap label{
+  position: absolute;
+  top: -6px;
+  left: 13px;
+  color: #999999;
+  opacity: 0;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+input:not(:focus):not(:empty):invalid[placeholder],
 textarea:not(:focus):invalid[placeholder] {
     color: #323232;
     font-weight: 400;
@@ -90,6 +102,16 @@ input:not(:focus):valid[placeholder]~.label-box label,
 textarea:not(:focus):valid[placeholder]~.label-box label {
     opacity: 1;
 }
+
+
+
+input:empty[placeholder],
+textarea:empty[placeholder]{
+  color: #999999;
+}
+
+
+
 
 input:focus:invalid ~ .label-box label,
 input:focus:valid ~ .label-box label,
@@ -118,17 +140,7 @@ textarea:focus:valid ~ label{
   font-size: 16px;
 }
 
-.label-box label,
-.textarea-wrap label{
-  position: absolute;
-  top: -6px;
-  left: 13px;
-  color: #999999;
-  opacity: 0;
-  font-size: 11px;
-  line-height: 13px;
-  font-weight: 400;
-}
+
 
 
 
@@ -1951,11 +1963,11 @@ select::-ms-expand {
 }
 .feedback-wrapper{
   background-color: #f8f7f4;
-  top: 336px;
+  top: 15%;
   left: 50%;
   margin-left: -237px;
   display: block;
-  position: absolute;
+  position: fixed;
   width: 454px;
   z-index: 7;
 }
