@@ -1,4 +1,6 @@
-body {
+html, body{
+  min-width: 1200px;
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', Arial, sans-serif;
@@ -6,13 +8,7 @@ body {
   line-height: 22px;
   font-weight: 400;
   color: #ffffff;
-  background-color: #849d8f;
-}
-html, body{
-  min-width: 1200px;
-  padding-left: 2.22%;
-  padding-right: 2.22%;
-  position: relative;
+  background-color: #849d8f;  
 }
 a{
   text-decoration: none;
@@ -259,8 +255,7 @@ textarea:focus:valid ~ label{
 .container{
   width: 1150px;
   margin: 0 auto;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 2.22%;
   position: relative;
 }
 
