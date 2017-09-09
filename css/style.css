@@ -252,7 +252,7 @@ textarea:focus:valid ~ label{
 }
 .main-navigation-wrapper{
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 }
@@ -286,6 +286,7 @@ textarea:focus:valid ~ label{
   flex-basis: 410px;
   flex-wrap: wrap;
   margin-left: -30px;
+  margin-top: 22px;
 }
 .site-navigation a{
   display: inline-block;
@@ -293,8 +294,8 @@ textarea:focus:valid ~ label{
   font-size: 16px;
   line-height: 18px;
   font-weight: 600;
-  padding: 10px 0 0 0;
-  margin: 0 17px 9px 12px;
+  padding: 8px 0 0 0;
+  margin: 0 17px 7px 12px;
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -310,7 +311,7 @@ textarea:focus:valid ~ label{
 .site-navigation a:hover,
 .site-navigation a:focus{
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px 12px;
+  padding: 8px 12px;
   margin: 0 5px 0 0;
   border-radius: 30px;
   border: none;
@@ -323,7 +324,7 @@ textarea:focus:valid ~ label{
 .site-navigation > li:hover > a  {
   color: #333333;
   background-color: rgba(255, 255, 255, 1);
-  padding: 10px 12px;
+  padding: 8px 12px;
   margin: 0 5px 0 0;
   border-radius: 30px;
   border: none;
@@ -332,7 +333,7 @@ textarea:focus:valid ~ label{
   border-radius: 30px;
   color: #ffffff;
   background-color: #d07058;
-  padding: 10px 12px;
+  padding: 8px 12px;
   margin: 0 5px 0 0;
   box-shadow: none;
   border: none;
@@ -341,7 +342,7 @@ textarea:focus:valid ~ label{
   border-radius: 30px;
   color: #ffffff;
   background-color: #d07058;
-  padding: 10px 12px;
+  padding: 8px 12px;
   margin: 0 5px 0 0;
   box-shadow: none;
   border: none;
@@ -357,7 +358,6 @@ textarea:focus:valid ~ label{
 
 .catalog-menu{
   position: relative;
-
 }
 
 .popup-catalog-menu{
@@ -507,7 +507,6 @@ textarea:focus:valid ~ label{
   top: 20px;
   border-radius: 5px;
   background-color: transparent;
-  padding: ;
   z-index: 3;
 }
 .popup-search{
@@ -677,7 +676,7 @@ textarea:focus:valid ~ label{
   display: block;
 }
 .basket-wrapper{
-  display: none;
+  display: block;
   width: 542px;
   position: absolute;
   right: 0;
@@ -701,7 +700,7 @@ textarea:focus:valid ~ label{
 
 .basket-popup a{
   font: inherit;
-  font: 13px;
+  font-size: 13px;
   line-height: 16px;
   font-weight: 400;
   color: #323232;
@@ -719,7 +718,7 @@ textarea:focus:valid ~ label{
 .basket-popup table {
   border-collapse: collapse;
   width: 100%;
-  font: 13px;
+  font-size: 13px;
   line-height: 16px;
   color: #323232;
   border-bottom: 1px solid rgba(202, 202, 199, 0.9);
@@ -755,7 +754,6 @@ textarea:focus:valid ~ label{
 .basket-popup td:nth-of-type(5){
   width: 15%;
   padding-right: 3.3%;
-  padding-right:;
   text-align: right;
 }
 .basket-popup .delete{
@@ -801,7 +799,7 @@ font-weight: 600;
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 600px;
+  font-weight: 600;
   padding: 11px 14px;
   border-radius: 25px;
   float: right;
@@ -958,12 +956,12 @@ background-color: #ffffff;
   vertical-align: middle;
   width: 17px;
   height: 17px;
-  margin-right: 4px;
+  margin-right: 2px;
+  margin-left: 2px;
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
-
 }
 .slider-pagination-item:hover,
 .slider-pagination-item:focus{
@@ -1189,7 +1187,7 @@ background-color: #ffffff;
 .features p{
   font-size: 24px;
   line-height: 30px;
-  font-weight: 500px;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 .features-list{
@@ -1292,7 +1290,7 @@ background-color: #ffffff;
 .news-in-blog p{
   font-size: 24px;
   line-height: 30px;
-  color: 323232;
+  color: #323232;
   font-weight: 600;
   margin-top: 0;
 }
@@ -1542,7 +1540,7 @@ background-color: #ffffff;
 .filter-check input[type="checkbox"] + .checkbox-indicator,
 .filter-radio input[type="radio"] + .radio-indicator{
   position: absolute;
-  top: 8;
+  top: 6px;
   left: 0;
   height: 16px;
   width: 16px;
@@ -1772,6 +1770,7 @@ select::-ms-expand {
 }
 .select-corner{
     position: relative;
+    display: block;
 }
 .select-corner::after{
   content: "";
@@ -1855,7 +1854,7 @@ select::-ms-expand {
   height: 28px;
   border-radius: 50%;
   color: #000000;
-  background-color: transparante;
+  background-color: transparent;
   text-align: center;
   vertical-align: baseline;
   font-size: 16px;
