@@ -2065,6 +2065,7 @@ select::-ms-expand {
   background-repeat: no-repeat;
   padding-left: 22px;
   margin-left: -22px;
+  font-weight: 600;
 }
 .footer-navigation ul:first-child{
   margin-left: -16px;
