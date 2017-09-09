@@ -50,6 +50,8 @@ main .button,
   background: linear-gradient(to bottom, #f26843 0%,#e74a35 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26843', endColorstr='#e74a35',GradientType=0 ); /* IE6-9 */
   box-shadow: 0 1px 2px 0 #ac1000;
+  transition-property: all;
+  transition-duration: 0.1s;
 }
 
 .button:active,
@@ -61,6 +63,8 @@ main .button,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f26843', endColorstr='#e74a35',GradientType=0 ); /* IE6-9 */
   box-shadow: inset 0 2px 2px 0 #942718;
   outline: none;
+  transition-property: all;
+  transition-duration: 0.6s;
 }
 .slider .button{
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.8);
@@ -131,7 +135,6 @@ textarea:not(:focus):valid[placeholder]~.label-box label {
 }
 
 
-
 input:empty[placeholder],
 textarea:empty[placeholder]{
   color: #999999;
@@ -146,6 +149,8 @@ textarea:focus:invalid ~ label,
 textarea:focus:valid ~ label{
   opacity: 1;
   color: #5b9ddf;
+  transition-property: opacity;
+  transition-duration: 0.4s;
 }
 
 .login-icon-email[placeholder],
@@ -315,19 +320,25 @@ textarea:focus:valid ~ label{
   margin: 0 5px 0 0;
   border-radius: 30px;
   border: none;
+  transition-property: all;
+  transition-duration: 0.05s;
 }
 .site-navigation a:active{
   background-color: rgba(255, 255, 255, 1);
   color: #333333;
   box-shadow: inset 0 2px 1px 0 #696969;
+  transition-property: background-color, color;
+  transition-duration: 0.05s;
 }
-.site-navigation > li:hover > a  {
+.site-navigation > .catalog-menu:hover > a  {
   color: #333333;
   background-color: rgba(255, 255, 255, 1);
   padding: 8px 12px;
   margin: 0 5px 0 0;
   border-radius: 30px;
   border: none;
+  transition-property: background-color, color;
+  transition-duration: 0.05s;
 }
 .site-navigation-current a {
   border-radius: 30px;
@@ -346,6 +357,8 @@ textarea:focus:valid ~ label{
   margin: 0 5px 0 0;
   box-shadow: none;
   border: none;
+  transition-property: background-color, color;
+  transition-duration: 0.05s;
 }
 .site-navigation .catalog-menu:active li,
 .site-navigation .catalog-menu:hover li,
@@ -389,9 +402,13 @@ textarea:focus:valid ~ label{
   background-color: #fbded8;
   position: relative;
   z-index: 4;
+  transition-property: all;
+  transition-duration: 0.1s;
 }
 .popup-catalog-menu li:active{
   background-color: #f6b5a5;
+  transition-property: all;
+  transition-duration: 0.05s;
 }
 .site-navigation .popup-catalog-menu li:first-child{
   border-top-left-radius: 5px;
@@ -491,6 +508,8 @@ textarea:focus:valid ~ label{
 .search-link:hover .search-link-button,
 .search-link:focus .search-link-button{
   background-color: rgba(255, 255, 255, 1);
+  transition-property: background-color;
+  transition-duration: 0.05s;
 }
 .search-link:hover .search-link-button path,
 .search-link:focus .search-link-button path{
@@ -554,6 +573,8 @@ textarea:focus:valid ~ label{
   color: #323232;
   font-weight: 500;
   background-color: rgba(255, 255, 255, 1);
+  transition-property: background-color;
+  transition-duration: 0.3s;
 }
 .login-link:hover > a path,
 .login-link:focus > a path,
@@ -570,6 +591,8 @@ textarea:focus:valid ~ label{
 .basket-link:active > a,
 .basket-link-full:active > a{
   box-shadow: inset 0 1px 2px 1px #323232;
+  transition-property: box-shadow;
+  transition-duration: 0.1s;
 }
 
 
@@ -965,6 +988,8 @@ background-color: #ffffff;
 .slider-pagination-item:hover,
 .slider-pagination-item:focus{
   background-color: rgba(255, 255, 255, 0.2);
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 .pagination-item-current,
 .pagination-item-current:hover,
@@ -972,6 +997,8 @@ background-color: #ffffff;
 .pagination-item-current:active,
 .slider-pagination-item:active{
   background-color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 
 
@@ -1060,7 +1087,9 @@ background-color: #ffffff;
   margin-left: 0;
 }
 .catalog-item:hover .button-wrap{
-  display: block;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.6s;
 }
 .catalog-item::before {
   content: '';
@@ -1072,14 +1101,16 @@ background-color: #ffffff;
   padding: 4.8% 0;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  display: none;
+  opacity: 0;
 }
 .catalog-item:hover::before {
-  display: block
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.6s;
 }
 
 .button-wrap {
-  display: none;
+  opacity: 0;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1445,6 +1476,9 @@ background-color: #ffffff;
 .breadcrumbs a:focus,
 .breadcrumbs a:active{
   color: #f1b89c;
+  opacity: 1;
+  transition-property: color;
+  transition-duration: 0.1s;
   border-bottom: 1px solid #f1b89c;
   cursor: pointer;
 }
@@ -1551,6 +1585,8 @@ background-color: #ffffff;
 .filter-check input[type="checkbox"]:focus + .checkbox-indicator,
 .filter-radio input[type="radio"]:focus + .radio-indicator{
   opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.6s;
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
@@ -1694,6 +1730,7 @@ background-color: #ffffff;
 }
 .filter-range-wrap .toggle:hover  {
   transform: scale(1.2);
+  transition-duration: 0.3s;
 }
 .filter-range-wrap .min-toggle:hover{
   left: 33px;
@@ -1965,6 +2002,8 @@ select::-ms-expand {
 .footer-social li:focus,
 .footer-social li:active{
   opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.1s;
 }
 .footer-social li:nth-child(1){
   background-image: url(../img/twitter.svg);
@@ -2005,6 +2044,8 @@ select::-ms-expand {
 .footer-copyright a:active{
   color: #ffbc9e;
   border-bottom: 1px solid #ffbc9e;
+  transition-property: all;
+  transition-duration: 0.1s;
 }
 .footer-navigation ul{
   padding: 0;
