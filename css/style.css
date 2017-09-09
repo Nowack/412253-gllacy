@@ -2090,9 +2090,7 @@ select::-ms-expand {
 .feedback-modal{
   display: none;
 }
-.modal-show{
-  display: block;
-}
+
 .modal-background {
  position: absolute;
  top: 0;
@@ -2191,4 +2189,8 @@ top: 4px;
 .feedback-modal .button{
   float: right;
   margin-top: 22px;
+}
+
+.modal-show{
+  display: block;
 }
