@@ -1039,7 +1039,6 @@ background-color: #ffffff;
 
   position: relative;
   margin-bottom: -5px;
-  z-index: 5;
 }
 .catalog-item:nth-child(1n+4){
   margin-right: 0;
@@ -1056,22 +1055,29 @@ background-color: #ffffff;
   position: absolute;
   width: 100%;
   padding-left: 4.8%;
-  padding: 4.8%;
+  padding-right: 4.8%;
   height: 100%;
-  margin-top: 30%;
+
   background-color: rgba(255, 255, 255, 0.2);
   margin-left: -4.8%;
+  padding-top: 0;
   border-radius: 10px;
-}
-.button-wrap{
   display: none;
-  position: absolute;
-  left: 0;
-  top: 340px;
-  width: 293px;
-  padding: 0px 0 21px 0;
-  border-radius: 10px;
-  z-index: 2;
+}
+.catalog-item:hover::before {
+    display: block
+}
+
+.button-wrap {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 340px;
+    right: 0;
+    left: 0;
+    padding: 0px 0 21px 0;
+    border-radius: 10px;
+    z-index: 2;
 }
 .button-wrap .button{
   padding: 9px 18px 12px 18px;
@@ -1080,6 +1086,7 @@ background-color: #ffffff;
 .catalog-item a{
   margin-bottom: auto;
   cursor: pointer;
+  position: relative;
 }
 .catalog-item h3{
   margin-bottom: auto;
