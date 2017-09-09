@@ -676,7 +676,7 @@ textarea:focus:valid ~ label{
   display: block;
 }
 .basket-wrapper{
-  display: block;
+  display: none;
   width: 542px;
   position: absolute;
   right: 0;
@@ -724,7 +724,6 @@ textarea:focus:valid ~ label{
   border-bottom: 1px solid rgba(202, 202, 199, 0.9);
   margin-bottom: 15px;
 }
-
 .basket-popup td{
   vertical-align: top;
   padding-top: 19px;
