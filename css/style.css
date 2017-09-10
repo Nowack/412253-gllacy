@@ -2096,9 +2096,21 @@ select::-ms-expand {
 .feedback-modal{
   display: none;
 }
-
+.modal-show{
+  display: block;
+  animation-name: coming;
+  animation-duration: 1.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+ @keyframes coming{
+  0% {transform: translate(-1000px,-2000px);}
+  60%  {transform: translate(-550px, -450px);}
+  90% {transform: translate(0, -940px);}
+  100% {transform: translate(0, -740px);}
+}
 .modal-background {
- position: absolute;
+ position: fixed;
  top: 0;
  left: 0;
  width: 100%;
@@ -2195,15 +2207,4 @@ top: 4px;
 .feedback-modal .button{
   float: right;
   margin-top: 22px;
-}
-
-@keyframes comin{
-  from {transform: translateY(-2000px);}
-  to {transform: translateY(0);}
-}
-
-.modal-show{
-  display: block;
-  animation-name: coming;
-  animation-duration: 0.5s;
 }
