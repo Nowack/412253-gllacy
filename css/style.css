@@ -1040,17 +1040,20 @@ background-color: #ffffff;
   bottom: 23px;
 }
 .promo-item-raspberry{
+  background-color: #b0001a;
   background-image: url(../img/raspberry.jpg);
   background-position: top center;
   background-repeat: no-repeat;
 
 }
 .promo-item-choco{
+  background-color: #603a22;
   background-image: url(../img/choco.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: 6px;
+
 }
 .promo h2{
   font-size: 35px;
@@ -1204,7 +1207,7 @@ background-color: #ffffff;
 
 .features{
   color: #323232;
-  background-color: #323232;
+  background-color: #e6d6b7;
   background-image: url(../img/waffle.jpg);
   background-position: top center;
   background-repeat: repeat;
@@ -1343,7 +1346,7 @@ background-color: #ffffff;
   margin: 5px 6px;
   height: 210px;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #f8f7f4;
   padding-left: 21px;
   padding-right: 10px;
 }
@@ -1386,6 +1389,7 @@ background-color: #ffffff;
   padding: 0;
   margin-left: -25px;
   position: relative;
+  background-color: #dcd4b9;
 }
 .contact-feedback{
   position: absolute;
@@ -1509,6 +1513,7 @@ background-color: #ffffff;
 .filters{
   margin-bottom: 65px;
   display: inline-block;
+  vertical-align: baseline;
 }
 .filter{
   display: -webkit-box;
