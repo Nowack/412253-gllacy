@@ -2192,6 +2192,13 @@ top: 4px;
   margin-top: 22px;
 }
 
+@keyframes comin{
+  from {transform: translateY(-2000px);}
+  to {transform: translateY(0);}
+}
+
 .modal-show{
   display: block;
+  animation-name: coming;
+  animation-duration: 0.5s;
 }
