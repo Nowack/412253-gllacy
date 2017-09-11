@@ -1082,13 +1082,12 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .catalog-item{
   flex-basis: 22.2%;
   padding: 7px 0 68px 0;
   position: relative;
-  margin: 0 1.1% 0 1.1%;
   margin-bottom: -40px;
 }
 .catalog-item:nth-child(4n){
@@ -1108,7 +1107,7 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
   position: absolute;
   top: 0;
   left: -4.8%;
-  right: -4.8%;
+  width: 100%;
   bottom: 0;
   padding: 4.8%;
   background-color: rgba(255, 255, 255, 0.2);
