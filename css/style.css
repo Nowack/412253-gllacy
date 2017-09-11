@@ -454,6 +454,10 @@ textarea:focus:valid ~ label{
 
 .popup-catalog-menu .current {
   background-color: #d07058;
+
+}
+.popup-catalog-menu .current a{
+  color: #ffffff;
 }
 .popup-catalog-menu .current:hover,
 .popup-catalog-menu .current:focus,
@@ -1044,14 +1048,16 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
 .promo-item-raspberry{
   background-color: #b0001a;
   background-image: url(../img/raspberry.jpg);
-  background-position: top left;
-  background-repeat: repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .promo-item-choco{
   background-color: #603a22;
   background-image: url(../img/choco.jpg);
   background-position: top center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: auto;
   margin-left: auto;
   margin-right: 6px;
 }
@@ -1080,7 +1086,7 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
 }
 .catalog-item{
   flex-basis: 22.2%;
-  margin: 0 1.11% 0 1.11%;
+  margin: 0 1.15% 0 1.15%;
   padding: 7px 0 68px 0;
   position: relative;
   margin-bottom: -40px;
