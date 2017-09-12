@@ -2029,6 +2029,9 @@ select::-ms-expand {
   z-index: 1;
   pointer-events: none;
 }
+.filter-selection-wrap:hover .select-corner::after{
+  border-color: #000000 transparent;
+}
 .selection-label:hover .filter-select,
 .selection-label:focus .filter-select{
   color: #323232;
