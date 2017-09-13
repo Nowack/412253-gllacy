@@ -1368,13 +1368,13 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
   background-image: url(../img/waffle.jpg);
   background-position: top center;
   background-repeat: repeat;
-  height: 306px;
   border-radius: 15px;
   margin-right: 4px;
   margin-bottom: 40px;
   padding-top: 1px;
   padding-right: 27px;
   padding-left: 20px;
+  padding-bottom: 20px;
 }
 .features p{
   font-size: 24px;
@@ -1459,6 +1459,7 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
 .news-in-blog{
   background-color: #ffffff;
   background-image: url(../img/strawberry.jpg);
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -1482,7 +1483,6 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 220px;
   margin-bottom: 40px;
 }
 .news-in-blog{
@@ -1515,16 +1515,19 @@ input.main-background-3:checked ~ div.main-background  label[for="main-backgroun
   margin-right: 4px;
   background-image: url(../img/post.jpg);
   background-position: 0 0;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background-size: contain;
+  box-sizing: border-box;
 }
 .subscribtion-wrap{
-  position: relative;
   margin: 5px 6px;
-  height: 210px;
+  width: auto;
   border-radius: 15px;
   background-color: #f8f7f4;
   padding-left: 21px;
   padding-right: 10px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .subscribtion-wrap p{
